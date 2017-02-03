@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Classes\ClusterCore.cs" />
     <Compile Include="Classes\Clusterizer.cs" />
+    <Compile Include="Classes\Dot.cs" />
     <Compile Include="Classes\Drawer.cs" />
     <Compile Include="Enums\ClusterColors.cs" />
     <Compile Include="MainFrame.cs">

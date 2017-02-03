@@ -2,13 +2,14 @@
 
 namespace KMeansAlgorithm.Classes
 {
-    internal class ClusterCore
+    internal class Dot
     {
-        public ClusterCore(Point location)
+        public Dot(Point location)
         {
             Location = location;
         }
 
         public Point Location { get; private set; }
+        public int ClusterNumber { get; set; }
     }
 }
