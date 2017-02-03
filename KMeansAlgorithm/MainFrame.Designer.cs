@@ -90,6 +90,7 @@
             this.btnClusterize.TabIndex = 5;
             this.btnClusterize.Text = "Clusterize";
             this.btnClusterize.UseVisualStyleBackColor = true;
+            this.btnClusterize.Click += new System.EventHandler(this.btnClusterize_Click);
             // 
             // label1
             // 

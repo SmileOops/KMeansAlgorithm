@@ -9,6 +9,6 @@ namespace KMeansAlgorithm.Classes
             Location = location;
         }
 
-        public Point Location { get; private set; }
+        public Point Location { get; set; }
     }
 }

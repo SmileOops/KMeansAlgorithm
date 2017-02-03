@@ -19,14 +19,14 @@ namespace KMeansAlgorithm
             var rand = new Random();
 
             var cores = new List<ClusterCore>();
-            for (var i = 0; i < 3; i++)
+            for (var i = 0; i < 20; i++)
             {
                 var coreLocation = new Point(rand.Next(0, 420), rand.Next(0, 420));
                 cores.Add(new ClusterCore(coreLocation));
             }
 
             var dots = new List<Dot>();
-            for (var i = 0; i < 100; i++)
+            for (var i = 20; i < 100000; i++)
             {
                 dots.Add(new Dot(new Point(rand.Next(0, 420), rand.Next(0, 420))));
             }
@@ -38,6 +38,17 @@ namespace KMeansAlgorithm
             var graphics = Graphics.FromImage(bitmap);
             drawer.DrawField(graphics, dots, cores);
             picboxBeforeClusterization.Image = bitmap;
+
+            clusterizer.OptimizeClusterisation(cores, dots);
+            var bitmap1 = new Bitmap(420, 420);
+            var graphics1 = Graphics.FromImage(bitmap1);
+            drawer.DrawField(graphics1, dots, cores);
+            picBoxAfterClusterization.Image = bitmap1;
+        }
+
+        private void btnClusterize_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
